@@ -4,7 +4,7 @@ export default function ProfessorPage() {
   const [alunos, setAlunos] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/alunos")
+    fetch("https://josepha-bank.onrender.com/alunos")
       .then((res) => res.json())
       .then((data) => {
         console.log("Alunos do backend:", data);
@@ -22,7 +22,7 @@ export default function ProfessorPage() {
       )
     );
 
-    fetch(`http://localhost:8000/alunos/${nome}/saldo?valor=${valor}`, {
+    fetch(`https://josepha-bank.onrender.com/alunos/${nome}/saldo?valor=${valor}`, {
       method: "POST",
     })
       .then((res) => res.json())

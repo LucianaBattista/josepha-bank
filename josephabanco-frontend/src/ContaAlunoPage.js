@@ -14,7 +14,7 @@ export default function ContaAlunoPage() {
       return;
     }
 
-    fetch(`http://localhost:8000/aluno/${nomeAluno}`)
+    fetch(`https://josepha-bank.onrender.com/aluno/${nomeAluno}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.erro) {

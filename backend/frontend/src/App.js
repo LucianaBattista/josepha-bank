@@ -36,7 +36,7 @@ export default function App() {
     const alunoAtualizado = { ...alunoLogado, saldo: novoSaldo };
     setAlunoLogado(alunoAtualizado);
 
-    fetch(`http://localhost:8000/alunos/${alunoLogado.nome}/saldo?valor=-${produto.preco}`, {
+    fetch(`http:///alunos/${alunoLogado.nome}/saldo?valor=-${produto.preco}`, {
       method: "POST",
     })
       .then((res) => res.json())

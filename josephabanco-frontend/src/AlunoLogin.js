@@ -5,7 +5,7 @@ export default function AlunoLogin({ onLogin }) {
   const [senha, setSenha] = useState("");
 
   const fazerLogin = () => {
-    fetch("http://localhost:8000/login", {
+    fetch("https://josepha-bank.onrender.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
