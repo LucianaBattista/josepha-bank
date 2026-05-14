@@ -1,13 +1,18 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pymongo import MongoClient
+import certifi
 from pydantic import BaseModel
 
 app = FastAPI()
 
 MONGO_URL = "mongodb+srv://josephabank:josepha2026@cluster0.qol7ke8.mongodb.net/?appName=Cluster0"
 
-client = MongoClient(MONGO_URL)
+client = MongoClient(
+    MONGO_URL,
+    tls=True,
+    tlsCAFile=certifi.where()
+)
 db = client["josepha_bank"]
 colecao_alunos = db["alunos"]
 
