@@ -18,7 +18,9 @@ colecao_alunos = db["alunos"]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=
+    ["http://localhost:3000"
+     "https://josepha-bank.onrender.com"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
