@@ -11,7 +11,8 @@ MONGO_URL = "mongodb+srv://josephabank:josepha2026@cluster0.qol7ke8.mongodb.net/
 client = MongoClient(
     MONGO_URL,
     tls=True,
-    tlsCAFile=certifi.where()
+    tlsCAFile=certifi.where(),
+    tlsAllowInvalidCertificates=True
 )
 db = client["josepha_bank"]
 colecao_alunos = db["alunos"]
