@@ -23,21 +23,21 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-if colecao_alunos.count_documents({}) == 0:
-    colecao_alunos.insert_many([
-        {"nome": "João", "saldo": 100.0, "usuario": "joao", "senha": "123"},
-        {"nome": "Maria", "saldo": 200.0, "usuario": "maria", "senha": "123"},
-    ])
+#if colecao_alunos.count_documents({}) == 0:
+    #colecao_alunos.insert_many([
+        #{"nome": "João", "saldo": 100.0, "usuario": "joao", "senha": "123"},
+        #{"nome": "Maria", "saldo": 200.0, "usuario": "maria", "senha": "123"},
+    #])
 
-colecao_alunos.update_one(
-    {"nome": "João"},
-    {"$set": {"usuario": "joao", "senha": "123"}}
-)
+#colecao_alunos.update_one(
+   # {"nome": "João"},
+   # {"$set": {"usuario": "joao", "senha": "123"}}
+#)
 
-colecao_alunos.update_one(
-    {"nome": "Maria"},
-    {"$set": {"usuario": "maria", "senha": "123"}}
-)
+#colecao_alunos.update_one(
+    #{"nome": "Maria"},
+    #{"$set": {"usuario": "maria", "senha": "123"}}
+#)
 
 
 class LoginData(BaseModel):
