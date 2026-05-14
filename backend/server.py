@@ -21,7 +21,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=
     ["http://localhost:3000"
-     "https://josepha-bank.onrender.com"],
+     "https://josepha-bank.vercel.app"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
