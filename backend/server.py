@@ -53,7 +53,7 @@ class PixData(BaseModel):
 
 @app.get("/alunos")
 def listar_alunos():
-    alunos = list(colecao_alunos.find({}, {"_id": 0}))
+    alunos = list(colecao_alunos.find({}, {"_id": 0, "senha": 0}))
     return alunos
 
 
