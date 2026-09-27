@@ -7,7 +7,7 @@ import os
 
 app = FastAPI()
 
-MONGO_URL = osgtnv("MONGO_URL")
+MONGO_URL = osgetnv("MONGO_URL")
 
 client = MongoClient(
     MONGO_URL,
