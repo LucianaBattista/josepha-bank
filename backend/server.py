@@ -3,10 +3,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from pymongo import MongoClient
 import certifi
 from pydantic import BaseModel
-
+import os
 app = FastAPI()
 
-MONGO_URL = "mongodb+srv://josephabank:josephaescola@cluster0.qol7ke8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+MONGO_URL = us.getnv("MONGO_URL")
 
 client = MongoClient(
     MONGO_URL,
