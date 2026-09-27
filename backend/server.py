@@ -6,7 +6,7 @@ from pydantic import BaseModel
 import os
 app = FastAPI()
 
-MONGO_URL = us.getnv("MONGO_URL")
+MONGO_URL = os.getnv("MONGO_URL")
 
 client = MongoClient(
     MONGO_URL,
